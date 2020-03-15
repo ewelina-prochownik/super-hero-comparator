@@ -1,15 +1,16 @@
 @import './node_modules/bootstrap/scss/bootstrap';
 @import '~@angular/material/theming';
 @import './app/features/auth/auth.component.scss-theme';
-
+@import './app/core/header/header.component.scss-theme';
 @include mat-core();
-$primary: mat-palette($mat-indigo);
-$accent: mat-palette($mat-pink, A200, A100, A400);
+$primary: mat-palette($mat-indigo, 800);
+$accent: mat-palette($mat-red);
 $theme: mat-light-theme($primary, $accent);
 
 @include angular-material-theme($theme);
 @mixin custom-components-theme($theme) {
   @include auth-component-theme($theme);
+  @include header-component-theme($theme);
 }
 
 html,

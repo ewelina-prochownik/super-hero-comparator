@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {AuthService} from './core/auth/auth.service';
+import { AuthService } from './core/auth/auth.service';
 
 @Component({
   selector: 'shc-root',
@@ -10,9 +10,5 @@ export class AppComponent {
   public title = 'super-hero-comparator';
   public isLoggedIn$ = this._authService.isLoggedIn$;
 
-  constructor(
-    private _authService: AuthService
-  ) {
-
-  }
+  constructor(private _authService: AuthService) {}
 }

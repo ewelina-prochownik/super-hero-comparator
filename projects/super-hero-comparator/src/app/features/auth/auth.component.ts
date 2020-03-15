@@ -1,4 +1,6 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { AuthService } from '../../core/auth/auth.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'shc-auth',
@@ -7,7 +9,21 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AuthComponent implements OnInit {
-  constructor() {}
+  public loginForm: FormGroup;
 
-  public ngOnInit(): void {}
+  constructor(private _authService: AuthService, private _fb: FormBuilder) {}
+
+  public ngOnInit(): void {
+    this.createForm();
+  }
+
+  private createForm() {
+    this.loginForm = this._fb.group({
+      accessToken: ['', [Validators.required]]
+    });
+  }
+
+  public login() {
+    this._authService.login(this.loginForm?.get('accessToken')?.value);
+  }
 }
