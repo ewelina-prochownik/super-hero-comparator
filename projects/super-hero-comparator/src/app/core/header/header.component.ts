@@ -13,6 +13,14 @@ export class HeaderComponent implements OnInit {
     {
       link: '',
       name: 'Home'
+    },
+    {
+      link: 'game/library',
+      name: 'Library'
+    },
+    {
+      link: 'game/fight',
+      name: 'Game'
     }
   ];
 

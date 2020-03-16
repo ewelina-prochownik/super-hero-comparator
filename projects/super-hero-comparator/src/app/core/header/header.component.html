@@ -1,7 +1,5 @@
 <mat-toolbar color="primary">
   <span>{{ title }}</span>
-
-  <!-- This fills the remaining space of the current row -->
   <span class="spacer"></span>
   <mat-nav-list>
     <a mat-list-item *ngFor="let item of menuLinks" [routerLink]="[item.link]" routerLinkActive="active">{{ item.name }}</a>

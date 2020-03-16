@@ -11,7 +11,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class AuthComponent implements OnInit {
   public loginForm: FormGroup;
 
-  constructor(private _authService: AuthService, private _fb: FormBuilder) {}
+  constructor(private _authService: AuthService, private _fb: FormBuilder) {
+    this._authService.logout();
+  }
 
   public ngOnInit(): void {
     this.createForm();
