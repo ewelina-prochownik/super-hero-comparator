@@ -1,2 +1,4 @@
 <shc-header *ngIf="(isLoggedIn$ | async) && !isAuthorizationUrl"></shc-header>
-<router-outlet></router-outlet>
+<div class="main-content">
+  <router-outlet></router-outlet>
+</div>
