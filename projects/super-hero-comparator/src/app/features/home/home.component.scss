@@ -1,5 +1,5 @@
 ::ng-deep .main-content {
-  background: url('../../../assets/superheroes.png') no-repeat 0 -30px,
+  background: url('../../../assets/superheroes.png') no-repeat center,
     linear-gradient(180deg, #e0f7fa 50%, rgba(255, 255, 255, 0) 65%);
-  background-size: cover;
+  background-size: contain;
 }
