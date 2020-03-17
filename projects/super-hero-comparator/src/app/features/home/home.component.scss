@@ -1,5 +1,22 @@
 ::ng-deep .main-content {
   background: url('../../../assets/superheroes.png') no-repeat center,
     linear-gradient(180deg, #e0f7fa 50%, rgba(255, 255, 255, 0) 65%);
-  background-size: contain;
+  background-size: cover;
+}
+
+.home-wrapper {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  .mat-card-wrapper {
+    margin: auto;
+    mat-card {
+      margin: 50px;
+      padding: 40px;
+      background: rgba(255, 255, 255, 0.95);
+      a {
+        text-decoration: none;
+      }
+    }
+  }
 }
