@@ -1,1 +1,5 @@
-<p>library works!</p>
+<div *ngIf="result$ | async as result">
+  <div *ngFor="let hero of result.results">
+    <shc-hero [hero]="hero"></shc-hero>
+  </div>
+</div>

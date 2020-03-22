@@ -24,6 +24,7 @@ body {
   background-image: url('./assets/bg.jpg');
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   animation: bg-animation 1.5s ease-in-out both;
 }
 

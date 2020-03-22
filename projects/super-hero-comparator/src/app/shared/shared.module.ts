@@ -7,6 +7,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatListModule } from '@angular/material/list';
 import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 const matModules = [
   MatButtonModule,
@@ -19,7 +20,7 @@ const matModules = [
 
 @NgModule({
   declarations: [],
-  imports: [...matModules, ReactiveFormsModule, RouterModule],
-  exports: [...matModules, ReactiveFormsModule, RouterModule]
+  imports: [...matModules, ReactiveFormsModule, RouterModule, CommonModule],
+  exports: [...matModules, ReactiveFormsModule, RouterModule, CommonModule]
 })
 export class SharedModule {}

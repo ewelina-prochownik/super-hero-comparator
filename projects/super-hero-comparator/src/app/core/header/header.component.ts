@@ -11,7 +11,7 @@ export class HeaderComponent implements OnInit {
   public title = 'Super Hero Comparator';
   public menuLinks: MenuLink[] = [
     {
-      link: '',
+      link: 'home',
       name: 'Home'
     },
     {
